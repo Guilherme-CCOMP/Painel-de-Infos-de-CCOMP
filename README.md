@@ -1,4 +1,4 @@
-# Painel de Infos - Ciência da Computação UERJ
+# Painel de Infos - Ciência da Computação - UERJ
 Um painel de controle acadêmico e visual para centralizar informações cruciais das disciplinas do curso de Ciência da Computação da UERJ. Este projeto foi criado para resolver a dispersão de dados, reunindo horários de aulas, prazos de avaliações, contatos e links úteis em uma única interface rápida e responsiva.
 
 ## ✨ Funcionalidades
