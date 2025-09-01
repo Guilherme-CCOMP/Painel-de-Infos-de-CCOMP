@@ -8,11 +8,12 @@ Um painel de controle acadêmico e visual para centralizar informações cruciai
 * Acesso Rápido: Uma seção dedicada para links úteis, como a grade curricular do curso.Design Responsivo: A interface se adapta para uma visualização otimizada em desktops, tablets e celulares.
 
 ## 🚀 Acesso
-O painel está hospedado e pode ser acessado publicamente através do link: [Acessar o Painel Acadêmico](https://www.google.com/search?q=https://guilherme-ccomp.github.io/Painel-de-Infos-de-CCOMP/)
+O painel está hospedado e pode ser acessado publicamente através do link: [Acessar o Painel Acadêmico](https://www.google.com/search?q=https://guilherme-ccomp.github.io/Painel-de-Infos-de-CCOMP/).
 
 ## 🛠️ Tecnologias Utilizadas
 Este projeto é construído apenas com tecnologias web fundamentais, sem a necessidade de frameworks complexos, garantindo máxima leveza e velocidade.
-* HTML5: Para a estrutura semântica do conteúdo.Tailwind CSS: Para a estilização rápida e responsiva através de classes utilitárias.
+* HTML5: Para a estrutura semântica do conteúdo.
+* Tailwind CSS: Para a estilização rápida e responsiva através de classes utilitárias.
 * JavaScript (Vanilla): Para a lógica da formatação condicional das datas de provas.
 
 ## 📋 Como Usar
