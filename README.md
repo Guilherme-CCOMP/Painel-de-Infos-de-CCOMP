@@ -5,7 +5,8 @@ Um painel de controle acadêmico e visual para centralizar informações cruciai
 * Tabela de Informações Centralizada: Consulte dados essenciais como professores, salas e links para as plataformas AVA/Classroom.
 * Horário Visual Interativo: Uma grade semanal com blocos de aula coloridos para uma identificação rápida e intuitiva das disciplinas.
 * Sistema de Alerta de Prazos: A formatação condicional destaca automaticamente as datas de provas que se aproximam (amarelo para a semana, vermelho para o dia).
-* Acesso Rápido: Uma seção dedicada para links úteis, como a grade curricular do curso.Design Responsivo: A interface se adapta para uma visualização otimizada em desktops, tablets e celulares.
+* Acesso Rápido: Uma seção dedicada para links úteis, como a grade curricular do curso.
+* Design Responsivo: A interface se adapta para uma visualização otimizada em desktops, tablets e celulares.
 
 ## 🚀 Acesso
 O painel está hospedado e pode ser acessado publicamente através do link: [Acessar o Painel Acadêmico](https://www.google.com/search?q=https://guilherme-ccomp.github.io/Painel-de-Infos-de-CCOMP/).
