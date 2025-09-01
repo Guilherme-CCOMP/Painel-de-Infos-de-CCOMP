@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Acadêmico 25.2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* cinza claro de fundo */
+        }
+        /* Estilos personalizados para a tabela de horários */
+        .schedule-table td {
+            border: 1px solid #e5e7eb;
+            vertical-align: middle;
+            text-align: center;
+            padding: 0.5rem;
+            font-weight: 500;
+        }
+        .schedule-table th {
+            border: 1px solid #e5e7eb;
+            background-color: #f9fafb;
+        }
+        .schedule-table .time-header {
+            font-weight: 600;
+            background-color: #f9fafb;
+            min-width: 120px;
+        }
+        /* Classes para a formatação condicional */
+        .deadline-soon {
+            background-color: #fef08a !important; /* Amarelo para "em breve" */
+            color: #713f12;
+            font-weight: 600;
+        }
+        .deadline-today {
+            background-color: #ef4444 !important; /* Vermelho para "hoje" */
+            color: white;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-6 md:p-8">
+    <div class="max-w-7xl mx-auto">
+        <h1 class="text-3xl font-bold text-gray-800 mb-2">Painel Acadêmico 25.2</h1>
+        <p class="text-gray-600 mb-8">Visão integrada das suas disciplinas e horários.</p>
+
+        <!-- Seção 1: Tabela de Informações e Prazos -->
+        <div class="bg-white p-6 rounded-xl shadow-md mb-8">
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Informações e Prazos</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm text-left text-gray-500">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+                        <tr>
+                            <th scope="col" class="px-6 py-3 rounded-l-lg">Disciplina</th>
+                            <th scope="col" class="px-6 py-3 text-center">P1</th>
+                            <th scope="col" class="px-6 py-3 text-center">P2</th>
+                            <th scope="col" class="px-6 py-3 text-center">P3</th>
+                            <th scope="col" class="px-6 py-3">Turma</th>
+                            <th scope="col" class="px-6 py-3">Sala</th>
+                            <th scope="col" class="px-6 py-3">E-mail</th>
+                            <th scope="col" class="px-6 py-3 rounded-r-lg">AVA/Classroom</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Linhas da tabela são coloridas para associação visual -->
+                        <tr class="bg-blue-50 border-b border-blue-100">
+                            <th scope="row" class="px-6 py-4 font-bold text-blue-900 whitespace-nowrap">Fundamentos da Computação</th>
+                            <td class="px-6 py-4 text-center date-cell" data-date=""></td>
+                            <td class="px-6 py-4 text-center date-cell" data-date=""></td>
+                            <td class="px-6 py-4 text-center date-cell" data-date=""></td>
+                            <td class="px-6 py-4">T1</td>
+                            <td class="px-6 py-4">6023-2</td>
+                            <td class="px-6 py-4">raissa.barcellos@ime.uerj.br</td>
+                            <td class="px-6 py-4"><a href="https://classroom.google.com/c/NzczODM3MDQ5MjY4" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Classroom</a></td>
+                        </tr>
+                        <tr class="bg-green-50 border-b border-green-100">
+                            <th scope="row" class="px-6 py-4 font-bold text-green-900 whitespace-nowrap">Cálculo I</th>
+                            <td class="px-6 py-4 text-center date-cell" data-date="06/10">06/10</td>
+                            <td class="px-6 py-4 text-center date-cell" data-date="01/12">01/12</td>
+                            <td class="px-6 py-4 text-center date-cell" data-date=""></td>
+                            <td class="px-6 py-4">T2</td>
+                            <td class="px-6 py-4">6005</td>
+                            <td class="px-6 py-4">andre.furtado@ime.uerj.br</td>
+                            <td class="px-6 py-4"></td>
+                        </tr>
+                        <tr class="bg-purple-50 border-b border-purple-100">
+                            <th scope="row" class="px-6 py-4 font-bold text-purple-900 whitespace-nowrap">Geometria Analítica</th>
+                            <td class="px-6 py-4 text-center date-cell" data-date="23/10">23/10</td>
+                            <td class="px-6 py-4 text-center date-cell" data-date="27/11">27/11</td>
+                            <td class="px-6 py-4 text-center date-cell" data-date=""></td>
+                            <td class="px-6 py-4">T1</td>
+                            <td class="px-6 py-4">6050</td>
+                            <td class="px-6 py-4">jaimevelasco@ime.uerj.br</td>
+                            <td class="px-6 py-4"><a href="https://ava.pr1.uerj.br/course/view.php?id=1038" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">SALA21IMEMAT</a></td>
+                        </tr>
+                        <tr class="bg-yellow-50 border-b border-yellow-100">
+                            <th scope="row" class="px-6 py-4 font-bold text-yellow-900 whitespace-nowrap">Matemática Discreta</th>
+                            <td class="px-6 py-4 text-center date-cell" data-date="30/09">30/09</td>
+                            <td class="px-6 py-4 text-center date-cell" data-date="11/11">11/11</td>
+                            <td class="px-6 py-4 text-center date-cell" data-date="09/12">09/12</td>
+                            <td class="px-6 py-4">T2</td>
+                            <td class="px-6 py-4">6105-2</td>
+                            <td class="px-6 py-4">americo@ime.uerj.br</td>
+                            <td class="px-6 py-4"><a href="https://ava.pr1.uerj.br/course/view.php?id=4514" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">SALA89IMEMAT</a></td>
+                        </tr>
+                        <tr class="bg-pink-50">
+                            <th scope="row" class="px-6 py-4 font-bold text-pink-900 whitespace-nowrap">Álgebra</th>
+                            <td class="px-6 py-4 text-center date-cell" data-date="01/10">01/10</td>
+                            <td class="px-6 py-4 text-center date-cell" data-date="28/11">28/11</td>
+                            <td class="px-6 py-4 text-center date-cell" data-date=""></td>
+                            <td class="px-6 py-4">T1</td>
+                            <td class="px-6 py-4">6105-2</td>
+                            <td class="px-6 py-4">joicesantos@ime.uerj.br</td>
+                            <td class="px-6 py-4"><a href="https://ava.pr1.uerj.br/course/view.php?id=5418" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">SALA09MATIME</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Seção 2: Horário Visual -->
+        <div class="bg-white p-6 rounded-xl shadow-md mb-8">
+             <h2 class="text-xl font-semibold text-gray-700 mb-4">Horário Visual das Aulas</h2>
+             <div class="overflow-x-auto">
+                 <table class="w-full schedule-table">
+                     <thead>
+                         <tr>
+                             <th class="w-24"></th>
+                             <th class="px-2 py-3">2ª FEIRA</th>
+                             <th class="px-2 py-3">3ª FEIRA</th>
+                             <th class="px-2 py-3">4ª FEIRA</th>
+                             <th class="px-2 py-3">5ª FEIRA</th>
+                             <th class="px-2 py-3">6ª FEIRA</th>
+                         </tr>
+                     </thead>
+                     <tbody>
+                         <tr>
+                             <td class="time-header">17:00-18:50</td>
+                             <td rowspan="2" class="bg-blue-100 text-blue-900">Fundamentos da Computação</td>
+                             <td></td>
+                             <td class="bg-pink-100 text-pink-900">Álgebra</td>
+                             <td></td>
+                             <td class="bg-pink-100 text-pink-900">Álgebra</td>
+                         </tr>
+                         <tr>
+                             <td class="time-header">18:50-19:40</td>
+                             <td class="bg-purple-100 text-purple-900">Geometria Analítica</td>
+                             <td></td>
+                             <td class="bg-purple-100 text-purple-900">Geometria Analítica</td>
+                             <td></td>
+                         </tr>
+                         <tr>
+                             <td class="time-header">19:40-21:20</td>
+                             <td rowspan="2" class="bg-green-100 text-green-900">Cálculo I</td>
+                             <td class="bg-yellow-100 text-yellow-900">Matemática Discreta</td>
+                             <td rowspan="2" class="bg-green-100 text-green-900">Cálculo I</td>
+                             <td class="bg-yellow-100 text-yellow-900">Matemática Discreta</td>
+                             <td rowspan="2" class="bg-blue-100 text-blue-900">Fundamentos da Computação</td>
+                         </tr>
+                         <tr>
+                             <td class="time-header">21:20-22:10</td>
+                             <td></td>
+                             <td></td>
+                         </tr>
+                     </tbody>
+                 </table>
+             </div>
+        </div>
+
+        <!-- Seção 3: Links Úteis -->
+        <div class="bg-white p-6 rounded-xl shadow-md">
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Links Úteis</h2>
+            <ul class="list-disc list-inside space-y-2">
+                <li>
+                    <a href="https://www.ime.uerj.br/wp-content/uploads/2022/06/ciencia_da_computacao.pdf" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Grade Curricular</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Este script aplica a formatação condicional nas datas de prova
+        document.addEventListener('DOMContentLoaded', function() {
+            const today = new Date();
+            // Zera a hora, minuto, segundo para comparar apenas a data
+            today.setHours(0, 0, 0, 0);
+
+            const currentYear = today.getFullYear();
+
+            const dateCells = document.querySelectorAll('.date-cell');
+
+            dateCells.forEach(cell => {
+                const dateStr = cell.dataset.date;
+                if (!dateStr) return; // Ignora células sem data
+
+                const parts = dateStr.split('/');
+                if (parts.length !== 2) return;
+
+                const day = parseInt(parts[0], 10);
+                const month = parseInt(parts[1], 10) - 1; // Mês é 0-indexado em JS
+
+                const examDate = new Date(currentYear, month, day);
+
+                // Calcula a diferença em milissegundos e converte para dias
+                const diffTime = examDate.getTime() - today.getTime();
+                const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+                // Aplica as classes com base na diferença de dias
+                if (diffDays >= 0 && diffDays <= 7) {
+                    if (diffDays === 0) {
+                        cell.classList.add('deadline-today');
+                    } else {
+                        cell.classList.add('deadline-soon');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
